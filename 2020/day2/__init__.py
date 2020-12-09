@@ -8,7 +8,12 @@ def old_password_is_valid(passwd):
 
 def password_is_valid(passwd):
     first_position, second_position, letter_to_look_for, pass_string = passwd
-
+    if ((pass_string[int(first_position) - 1] == letter_to_look_for or
+            pass_string[int(second_position) - 1] == letter_to_look_for) and
+            pass_string[int(first_position) -1] != pass_string[int(second_position)-1]):
+        print('True', passwd)
+        return True
+    return False
 
 
 def validate_passwords(password_file):
