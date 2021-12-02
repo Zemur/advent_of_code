@@ -1,6 +1,6 @@
 def read_input():
     with open('input') as f:
-        return list(map(int, map(str.strip, f.readlines())))
+        return [int(i.strip()) for i in f.readlines()]
 
 
 def compare_depth(depth_readings):
